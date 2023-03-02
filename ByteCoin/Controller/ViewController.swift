@@ -9,12 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var coinManager = CoinManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-
-}
+        coinManager.fetchCurrencyType(currencyType: "/USD")
+    } //override func viewDidLoad
+    
+    
+} //class ViewController
 

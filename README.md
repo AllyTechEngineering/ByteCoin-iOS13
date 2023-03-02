@@ -1,5 +1,5 @@
 # ByteCoin-iOS Project
-Project to use a bitcoin API to show the current exchange rate for other world currencies:
+Project to use a bitcoin API to show the current exchange rate for other world currencies:  
 This project uses:    
   *the delegate pattern.  
   *Swift protocols and extensions.  

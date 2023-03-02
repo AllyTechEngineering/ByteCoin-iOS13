@@ -17,17 +17,22 @@ struct CoinManager {
     let baseURL = "https://rest.coinapi.io/v1/exchangerate/BTC"
     let apiKey = "E9C4B782-FD42-4DBE-A9C9-27184537E3BC"
     
+    
     let currencyArray = ["AUD", "BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
     /*
      This is the test API call for BTC to USD
      https://rest.coinapi.io/v1/exchangerate/BTC/USD?apikey=E9C4B782-FD42-4DBE-A9C9-27184537E3BC
      */
+    func getCoinPrice ( for currency: String){
+        fetchCurrencyType(currencyType: currency)
+       print(currency)
+    } //func getCoinPrice
     
     func fetchCurrencyType (currencyType: String){
-        let urlString = "\(baseURL)\(currencyType)?apikey=\(apiKey)"
+        let urlString = "\(baseURL)/\(currencyType)?apikey=\(apiKey)"
         print(urlString)
         performRequest(urlString: urlString)
-    }
+    } //func fetchCurrencyType
     
     // Step 1: create a URL
     func performRequest(urlString: String) {
